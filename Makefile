@@ -6,7 +6,7 @@ TARGET=build/go
 $(shell mkdir -p build/)
 
 ${TARGET}: ${OBJS} ${HEADERS}
-	cc -o ${TARGET} ${OBJS}
+	mpicc -o ${TARGET} ${OBJS}
 
 clean:
 	rm -rf build/ ${OBJS}
